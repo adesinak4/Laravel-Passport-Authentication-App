@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+     'default' => env('DB_CONNECTION', 'mysql'),
+//     'default' => env('DB_CONNECTION', 'your_heroku_mysql_connection'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,6 +35,8 @@ return [
     */
 
     'connections' => [
+        
+        
 
         'sqlite' => [
             'driver' => 'sqlite',
@@ -42,6 +45,7 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
+        
 
         'mysql' => [
             'driver' => 'mysql',
@@ -62,6 +66,7 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+        
 
         'pgsql' => [
             'driver' => 'pgsql',
