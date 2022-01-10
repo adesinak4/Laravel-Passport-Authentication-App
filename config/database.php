@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+//     'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'your_heroku_mysql_connection'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +67,7 @@ return [
 //             ]) : [],
 //         ],
         
-        'mysql' => [
+        'your_heroku_mysql_connection' => [
             'driver' => 'mysql',
             'url' => $url = parse_url(getenv("CLEARDB_DATABASE_URL"));,
             'host' => env('DB_HOST', 'us-cdbr-east-05.cleardb.net'),
